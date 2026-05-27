@@ -1,0 +1,31 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.clauxel.decapodkernel/decapodkernel-mcp",
+  "description": "Decapod Intent Kernel is a hosted remote MCP for Decapod.",
+  "version": "1.0.0",
+  "website_url": "https://decapodkernel.clauxel.com/",
+  "repository": {
+    "url": "https://github.com/clauxel/decapod-intent-kernel-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://decapodkernel.clauxel.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer token from the product website.",
+          "is_required": true,
+          "is_secret": true
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "title": "Decapod Intent Kernel MCP",
+      "server_card_url": "https://decapodkernel.clauxel.com/server-card.json"
+    }
+  }
+}
